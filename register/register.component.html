@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <form action="" [formGroup] = "RegisterForm" (ngSubmit)="register()" class="box">
+            <h1>Registration</h1>
+
+            <div>
+
+            <div class="">
+                <label for="" class="labelname">
+                   <input type="text" placeholder="Name" formControlName="uname" name="name" >
+                </label>    <br>
+                <span  *ngIf = "(this.RegisterForm.get('uname')?.touched || this.RegisterForm.get('uname')?.dirty) && (this.RegisterForm.get('uname')?.errors)"  class="error"   > Invalid Username*</span>
+            </div>
+
+            <div class="">
+                <label for="" class="labelname"> 
+                    <input type="text" placeholder="Account Number" formControlName="acno" name="account_num" >
+                </label>       <br>
+                <span class="error"  *ngIf = "(this.RegisterForm.get('acno')?.touched || this.RegisterForm.get('acno')?.dirty) && (this.RegisterForm.get('acno')?.errors)"  >Invalid Account Number*</span>      
+            </div>
+
+            <div>
+                <label for="" class="labelname"> 
+                    <input type="password" placeholder="Password" formControlName="pwd" name="password" >
+                </label>  <br>
+
+                <span  *ngIf = "(this.RegisterForm.get('pwd')?.touched || this.RegisterForm.get('pwd')?.dirty) && (this.RegisterForm.get('pwd')?.errors)"  class="error"   > Invalid Username*</span>
+
+            </div>
+
+            <!-- <div class="">
+                <label for="" class="labelname"> 
+                    <input type="text" placeholder="Email" name="" id="">
+                </label>     
+            </div>
+
+            <div>
+                <label for="" class="labelname"> 
+                    <input type="number" placeholder="Phone Number" name="" id="">
+                </label>
+            </div> -->
+            <div class="">
+                <button type="submit"  class="btn btn1">Create Account</button>     
+                <button  class="btn btn2">Cancel</button>
+            </div>
+        </div>
+            
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

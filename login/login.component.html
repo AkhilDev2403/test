@@ -1,0 +1,159 @@
+<!-- <p>login works!</p>
+<h1> {{heading}} </h1>
+<h1> <u> Bank Login </u> </h1>
+<div class="container">
+    <div class="login-div">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" style=" background-color: #7952b3; border: 2px solid #08326e; border-radius: 20px;"> -->
+                <!-- <h2 style="text-align: center;">Login</h2> -->
+
+                <!-- <div class="input-group mb-3 mt-5"> -->
+                   <!-- <input type="text" class="form-control" id="uname" [value]="acNo" (change)="accnt_no($event)" placeholder="username" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+                   <!-- <input type="text" class="form-control" id="uname" [(ngModel)]="acno"  placeholder="username" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+                   <!-- <input type="text" class="form-control" id="uname" #acno  placeholder="username" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+
+                  <!-- </div>
+
+                  <div class="input-group mb-3"> -->
+                    <!-- <input type="password" class="form-control" id="pwd" (change)="pwdChange($event)" placeholder="password" aria-label="password" aria-describedby="basic-addon2"> -->
+                    <!-- <input type="password" class="form-control" [(ngModel)]="pwd" placeholder="password" aria-label="password" aria-describedby="basic-addon2"> -->
+                    <!-- <input type="password" class="form-control" #pwd placeholder="password" aria-label="password" aria-describedby="basic-addon2"> -->
+                    <!-- <input type="password" class="form-control" #pwd placeholder="password" aria-label="password" aria-describedby="basic-addon2"> -->
+
+                  <!-- </div>
+                  <div class="input-group mb-3">
+                    <p style="color: red;" id="error"></p>  
+                  </div>
+                  <div class="input-group mb-3 login-btn-center">
+                    <button (click)="login()" class="btn btn-outline-dark bt1" style="color: white; border-radius: 15px;">Login</button>
+
+                    <a routerLink="registration" class="btn btn-outline-dark">
+                      sign in
+                    </a>
+                    
+                  </div>
+
+                  
+
+                  
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="container">
+
+  
+    <form  [formGroup]="LoginForm" (ngSubmit)="login()"  class="box">
+        <h1>Login</h1>
+        <!-- <input type="text" placeholder="username" [(ngModel)]="acno" [ngModelOptions]="{standalone: true}" name="" id="">
+        <input type="password" placeholder="password" [(ngModel)]="pwd" [ngModelOptions]="{standalone: true}" name="" id=""> -->
+
+        <!-- ngModel -->
+        <!-- <input type="text" placeholder="username" [(ngModel)]="acno"  name="acno" id="">
+        <input type="password" placeholder="password" [(ngModel)]="pwd"  name="pwd" id=""> -->
+
+        <!-- formGroup -->
+
+        <input type="text" placeholder="username" fromControlName = 'acno'  name="acno"> 
+        <span  *ngIf = "(this.LoginForm.get('acno')?.touched || this.LoginForm.get('acno')?.dirty) && this.LoginForm.get('acno')?.errors"   class="error">*Invalid Account Number</span>
+
+        <input type="password" placeholder="password" fromControlName = "pwd"  name="pwd">
+        <span  *ngIf = "(this.LoginForm.get('pwd')?.touched || this.LoginForm.get('pwd')?.dirty) && this.LoginForm.get('pwd')?.errors"   class="error">*Invalid Account Number</span>
+
+
+
+        <!-- <button (click)="login()" class="btn " style="color: white; border-radius: 15px;">Login</button>
+
+        <a routerLink="registration" class="btn btn-outline-dark">
+          sign in
+        </a> -->
+        
+        <!-- <input type="submit" (click)="login()" name="" value="Login" id=""> -->
+
+        <input type="submit" name="" value="Login" id="">
+
+
+        <div class="mt-5 div1">
+        <p class="qstn">Don't have account?</p>
+        <a routerLink="registration" class="signin">
+          sign in
+        </a>
+      </div>
+    </form>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-----------------------------------------------------------note----------------------------------------------
+
+
+  when using ngModel there are some rules for that
+
+  1. for normal input
+
+    <input type="text" placeholder="username" [(ngModel)]="acno"  name="" id=""> 
+    <button (click)="login()" class="btn"> Login </button>
+        <a routerLink="registration" class="btn btn-outline-dark">    sign in  </a> 
+          
+  2. if you are using inside a <form>
+
+      2.1  by using  normal ngModel
+
+            <form>
+              <input type="text" placeholder="username" [(ngModel)]="acno" [ngModelOptions]="{standalone: true}" id="">
+              <button (click)="login()" class="btn"> Login </button>
+             <a routerLink="registration" class="btn btn-outline-dark">    sign in  </a> 
+            </form>
+
+            (here u don't want to use name="" tag)
+            But you must use  [ngModelOptions]="{standalone: true}" this line
+          
+      2.2   by using tag=> name=""
+
+              <form action="" (ngSubmit)="login()" class="box">
+               <input type="text" placeholder="username" [(ngModel)]="acno"  name="acno" id="">
+               <input type="submit" name="" value="Login" id="">
+              </form>
+
+              in here you shoulspecify name="any name" must given
+              and change the button type to submit 
+              and also call the function in the form like =>      (ngSubmit)="login()"   -->

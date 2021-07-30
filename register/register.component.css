@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.box h1{
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box{
+    width: 900px;
+    height: 670px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+}
+
+.box input[type = "text"], .box input[type="password"], .box input[type="number"]{
+    border: 0;
+    background: none;
+    /* display: block; */
+    margin: 20px auto;
+    border: 2px solid #3498db;
+    padding: 14px 10px; 
+    width: 200px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.25s;
+    text-align: center;
+}
+
+
+
+.box input[type = "text"]:focus, .box input[type="password"]:focus, .box input[type="number"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+
+
+.labelname{
+    color: white;
+}
+
+
+
+
+
+.btn1{
+    border: 0;
+    background: none;
+    ;
+    margin: 20px auto;
+    border: 2px solid #2ecc71;
+    padding: 18px 40px;
+    outline: none;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.btn1:hover{
+    color: black;
+    background: rgba(10, 236, 21, 0.925);
+    box-shadow: 0 0 10px #2196f3 0 0 40px #2196f3 0 0 80px #2196f3;
+    
+}
+
+
+.btn2{
+    border: 0;
+    background: none;
+    margin-left: 50px;
+    /* margin: 20px auto; */
+    border: 2px solid #2ecc71;
+    padding: 18px 40px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.btn2:hover{
+    background: #E60D0D;
+}
+
+.error{
+    color: red;
+}

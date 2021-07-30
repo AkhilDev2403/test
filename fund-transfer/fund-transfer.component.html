@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="container">
+
+  
+    <form action="" (ngSubmit)="withdraw()" class="box">
+        <h1>Withdraw</h1>
+        
+        <input type="text" placeholder="username" [(ngModel)]= "wacno"  name="withdraw_acno" id="">
+        <input type="password" placeholder="password" [(ngModel)]= "wpwd"  name="withdrw_pwd" id="">
+        <input type="number" placeholder="Amount" [(ngModel)]= "wamt"  name="w_amount" id="">
+
+
+
+        <input type="submit" name="" value="Withdraw" id="">
+
+
+        <div class="mt-5 div1">
+        
+      </div>
+    </form>
+
+
+    <form action="" (ngSubmit)="deposit()" class="box" style="margin-top: 500px;">
+        <h1>Deposit</h1>
+        
+        <input type="text" placeholder="username" [(ngModel)]="d_acno"  name="acno" id="">
+        <input type="password" placeholder="password" [(ngModel)]="d_pwd"  name="pwd" id="">
+        <input type="number" placeholder="Amount" [(ngModel)]="d_amt"  name="amount" id="">
+
+
+
+        <input type="submit" name="" value="Deposit" id="">
+
+
+        <div class="mt-5 div1">
+        
+      </div>
+    </form>
+
+</div>
+
+
+</body>
+</html>

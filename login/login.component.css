@@ -1,0 +1,103 @@
+
+
+/* .login-btn{
+    text-align: center;
+}
+.btn{
+   margin-left: auto;
+   margin-right: auto;
+}
+.login-div{
+    margin-top: 100px;
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Boogaloo', cursive;
+    /* font-family: 'Lilita One', cursive; 
+}
+.bt1{
+    font-family: 'Boogaloo', cursive;
+    font-size: 20px;
+} */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: wheat;
+}
+
+.box h1{
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box{
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+}
+
+.box input[type = "text"], .box input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus, .box input[type="password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover{
+    background: #2ecc71;
+}
+
+.qstn{
+    margin-left: 10px;
+    color: white;
+}
+
+.signin{
+    margin-left: 50px;
+    color: white;
+}
+
+.div1{
+    display: flex;
+}
+
+.error{
+    color: red;
+}

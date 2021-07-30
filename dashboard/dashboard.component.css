@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+
+.custom navbar-toggler{
+    border-color: blue;
+}
+
+.navbar-main{
+    background-color: #38c977;
+}
+.a-nav a{
+    color: black;
+    text-transform: uppercase;
+    margin: 20px;
+}
